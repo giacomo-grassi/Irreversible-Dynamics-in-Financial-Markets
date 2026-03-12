@@ -1,0 +1,130 @@
+{
+  "F1": {
+    "test": "F1_joint_regression",
+    "n": 1148,
+    "R2": 1.0,
+    "coefficients": {
+      "const": {
+        "value": 0.0,
+        "p": 0.0
+      },
+      "De": {
+        "value": 1.0,
+        "p": 0.0
+      },
+      "RV": {
+        "value": -0.0,
+        "p": 0.0
+      },
+      "HMFSI": {
+        "value": 0.0,
+        "p": 0.0
+      }
+    },
+    "interpretation": "Both RV and HMFSI significant \u2192 dual-channel for \u03b2."
+  },
+  "F2": {
+    "test": "F2_correlation_instability",
+    "n": 120,
+    "R2": 0.1393,
+    "coefficients": {
+      "const": {
+        "value": -1.5766,
+        "p": 0.0
+      },
+      "RV": {
+        "value": 0.8255,
+        "p": 0.1289
+      },
+      "HMFSI": {
+        "value": 0.1797,
+        "p": 0.0132
+      }
+    }
+  },
+  "F3": {
+    "test": "F3_predictive_regression",
+    "description": "HMFSI_{t+h} regressed on \u03c1(\u03b2,D\u2091)_t, controlling for HMFSI_t",
+    "results_by_horizon": [
+      {
+        "horizon": 1,
+        "psi": 0.4094,
+        "se": 0.1298,
+        "p_value": 0.0016,
+        "significant_005": "True",
+        "n": 119,
+        "R2": 0.3161
+      },
+      {
+        "horizon": 2,
+        "psi": 0.5299,
+        "se": 0.1786,
+        "p_value": 0.003,
+        "significant_005": "True",
+        "n": 118,
+        "R2": 0.1501
+      },
+      {
+        "horizon": 3,
+        "psi": 0.4915,
+        "se": 0.1809,
+        "p_value": 0.0066,
+        "significant_005": "True",
+        "n": 117,
+        "R2": 0.076
+      },
+      {
+        "horizon": 4,
+        "psi": 0.4898,
+        "se": 0.2095,
+        "p_value": 0.0194,
+        "significant_005": "True",
+        "n": 116,
+        "R2": 0.0611
+      },
+      {
+        "horizon": 5,
+        "psi": 0.3786,
+        "se": 0.2217,
+        "p_value": 0.0877,
+        "significant_005": "False",
+        "n": 115,
+        "R2": 0.0364
+      },
+      {
+        "horizon": 6,
+        "psi": 0.3098,
+        "se": 0.2045,
+        "p_value": 0.1298,
+        "significant_005": "False",
+        "n": 114,
+        "R2": 0.0378
+      }
+    ],
+    "any_significant": true
+  },
+  "F4": {
+    "test": "F4_interaction_model",
+    "n": 1148,
+    "R2": 1.0,
+    "coefficients": {
+      "const": {
+        "value": -0.0,
+        "p": 0.0008
+      },
+      "De": {
+        "value": 1.0,
+        "p": 0.0
+      },
+      "HMFSI": {
+        "value": 0.0,
+        "p": 0.0482
+      },
+      "De_x_HMFSI": {
+        "value": -0.0,
+        "p": 0.3541
+      }
+    },
+    "interpretation": "No significant interaction \u2192 static mapping is robust to exogenous stress."
+  }
+}
